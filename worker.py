@@ -8,6 +8,7 @@ from pyes import ES
 
 from utils import ensure_dir, get_logger
 
+
 logger = get_logger('worker')
 
 
@@ -82,5 +83,4 @@ def consume():
         logger.info("Worker was shut down.")
     
 
-if __name__ == "__main__":
-    consume()    
+if __name__ == "__main__": consume()    

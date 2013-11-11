@@ -2,6 +2,7 @@
 import os, shutil, time
 from glob import glob
 
+
 def main():
     """Simulate localizing remote data to our staging area."""
 
@@ -18,5 +19,6 @@ def main():
         print "staged %s to %s" % (i, stage_file)
         #time.sleep(1)
         #break
+
 
 if __name__ == "__main__": main()

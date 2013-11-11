@@ -4,12 +4,16 @@ from kombu import Connection, Exchange, Queue
 from tornado.ioloop import IOLoop
 from utils import ensure_dir, get_logger
 
+
 logger = get_logger('watcher')
+
 
 SIGNAL_RE = re.compile(r'^(.+)\.done$')
 
+
 class StagedDataHandler(pyinotify.ProcessEvent):
     """Handle events on staging directory."""
+
 
     def handle(self, event):
         """Handle events."""
@@ -37,9 +41,12 @@ class StagedDataHandler(pyinotify.ProcessEvent):
                 logger.info("Queued %s." % data_file)
                 os.unlink(event.pathname)
 
+
     def process_IN_CREATE(self, event): self.handle(event)
 
+
     def process_IN_MOVED_TO(self, event): self.handle(event)
+
 
 def watch(stage_dir):
     """Watch for raw data signal files and dispatch for processing."""
@@ -65,5 +72,4 @@ def watch(stage_dir):
     notifier.stop()
 
 
-if __name__ == "__main__":
-    watch("/data/public/staging")
+if __name__ == "__main__": watch("/data/public/staging")

@@ -4,6 +4,8 @@
   $ pip install pyinotify kombu requests pyes
 3. create requirements file
   $ pip freeze > requirements.txt
-4. show watcher.py - comment out queue
+  $ to install from requirements, pip install -r requirements.txt
+4. show localize.py
+5. show watcher.py - comment out queue
  - go through code and test with "touch" and "mv"
-5. show worker.py
+6. show worker.py
