@@ -16,6 +16,6 @@ def main():
         with open(signal_file, 'w') as f:
             f.write('DONE')
         print "staged %s to %s" % (i, stage_file)
-        time.sleep(1)
+        #time.sleep(1)
 
 if __name__ == "__main__": main()
