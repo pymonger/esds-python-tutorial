@@ -1,0 +1,13 @@
+{
+  "_id":        { "type": "string", "path": "id", "index": "not_analyzed", "store": "yes" },
+  "_timestamp": { "enabled": true, "store": "yes" },
+  "properties": {
+    "id":                 { "type": "string", "index": "not_analyzed" },
+    "dataset":            { "type": "string", "index": "not_analyzed" },
+    "starttime":          { "type": "date", "format": "dateOptionalTime" },
+    "endtime":            { "type": "date", "format": "dateOptionalTime" },
+    "location":           { "type": "geo_shape", "tree": "quadtree", "precision": "1m" },
+    "urls":               { "type": "string", "index_name": "url" },
+    "browse_urls":        { "type": "string", "index_name": "browse_url" }
+  }
+}

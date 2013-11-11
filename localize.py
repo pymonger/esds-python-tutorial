@@ -17,5 +17,6 @@ def main():
             f.write('DONE')
         print "staged %s to %s" % (i, stage_file)
         #time.sleep(1)
+        #break
 
 if __name__ == "__main__": main()

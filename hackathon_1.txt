@@ -1,7 +1,7 @@
 1. Create virtualenv
-  $ virtualenv esds_tutorial
+  $ virtualenv --system-site-packages esds_tutorial
 2. install packages
-  $ pip install pyinotify kombu tornado
+  $ pip install pyinotify kombu requests pyes
 3. create requirements file
   $ pip freeze > requirements.txt
 4. show watcher.py - comment out queue
