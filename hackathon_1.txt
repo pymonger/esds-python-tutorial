@@ -4,3 +4,6 @@
   $ pip install pyinotify kombu tornado
 3. create requirements file
   $ pip freeze > requirements.txt
+4. show watcher.py - comment out queue
+ - go through code and test with "touch" and "mv"
+5. show worker.py

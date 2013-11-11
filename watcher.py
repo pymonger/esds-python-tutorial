@@ -2,12 +2,9 @@
 import os, re, logging, pyinotify
 from kombu import Connection, Exchange, Queue
 from tornado.ioloop import IOLoop
-from utils import ensure_dir
+from utils import ensure_dir, get_logger
 
-log_fmt = "[%(asctime)s %(name)s %(levelname)s] %(message)s"
-logging.basicConfig(level=logging.DEBUG, format=log_fmt)
-logger = logging.getLogger('watcher')
-logger.setLevel(logging.DEBUG)
+logger = get_logger('watcher')
 
 SIGNAL_RE = re.compile(r'^(.+)\.done$')
 
